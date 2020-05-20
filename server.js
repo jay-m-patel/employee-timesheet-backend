@@ -4,16 +4,27 @@ const cookieParser = require("cookie-parser")
 const cors = require("cors")
 
 const app = express()
-app.use(cors({
-    origin: "https://hardcore-raman-bd4c42.netlify.app/",
-    credentials: true
-}))
+// app.use(cors({
+//     origin: "https://hardcore-raman-bd4c42.netlify.app/",
+//     credentials: true
+// }))
 // app.use(cors({
 //     origin: "*",
 //     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 //     credentials: true
 // }))
 
+var whitelist = ['https://hardcore-raman-bd4c42.netlify.app/']
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+app.use(cors(corsOptions))
 
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
