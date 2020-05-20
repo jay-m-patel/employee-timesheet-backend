@@ -9,15 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/attainu/Emplyee-time-sheet.git"
+    "url": "https://github.com/jay-patel-au6/employee-timesheet-backend.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/attainu/Emplyee-time-sheet/issues"
-  },
-  "homepage": "https://github.com/attainu/Emplyee-time-sheet#readme",
   "devDependencies": {
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.2"
