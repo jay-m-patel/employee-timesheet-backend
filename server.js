@@ -14,7 +14,7 @@ const app = express()
 //     credentials: true
 // }))
 
-var whitelist = ['https://hardcore-raman-bd4c42.netlify.app']
+var whitelist = ['https://hardcore-raman-bd4c42.netlify.app', 'https://priceless-heyrovsky-99c31c.netlify.app']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1 || !origin) {
